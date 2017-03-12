@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using TvHelper.Parsers;
 using TvHelper.Servicies;
 
 namespace TvHelper.Test

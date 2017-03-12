@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using TvHelper.Models;
 
-namespace TvHelper.Servicies
+namespace TvHelper.Parsers
 {
     public class StringToTorrentParser
     {

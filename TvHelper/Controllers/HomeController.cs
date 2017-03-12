@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using TvHelper.Parsers;
 using TvHelper.Servicies;
 
 namespace TvHelper.Controllers
