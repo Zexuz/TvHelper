@@ -12,7 +12,10 @@
     @foreach (var torrent in Model)
     {
 
-        <li><a href="@Url.Action("Open","Video",new {filePath = torrent.Path})" target="_blank">@torrent</a></li>
+        <li>
+            <a href="@Url.Action("Open", "Video", new {filePath = torrent.Path})" target="_blank">@torrent</a> <p class="@(torrent.StartTime == DateTime.MinValue ? "new right" : "old")">new</p>
+        </li>
+
     }
 </ul>
 

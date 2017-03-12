@@ -22,3 +22,18 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.new {
+    background-color: #a52a2a;
+    margin-bottom: 0;
+}
+
+.container.body-content li > a {
+    color:#ffffff;
+}
+.container.body-content li:nth-child(odd) {
+    background-color: #808080;
+}
+.container.body-content li:nth-child(even) {
+    background-color: #a9a9a9;
+}

@@ -27,11 +27,14 @@ namespace TvHelper.Controllers
         {
             // Creates a model and passes it on to the view.
             var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
-            var torrentNamingService = new StringToTorrentParser();
+            var stringToTorrentParses = new StringToTorrentParser();
 
-            var downloadedTorrents = files.Select(torrentNamingService.StringToDownloadedTorrent).ToList();
+            var videos = files.Select(stringToTorrentParses.StringToDownloadedTorrent).ToList();
+           //todo check if mpc-hc prosess is running
+            //if it is, we are watching a video. Then get the current video from the webinterface.
+            //save that info in the db?c
 
-            return View(downloadedTorrents);
+            return View(videos);
         }
     }
 }
