@@ -16,29 +16,10 @@ namespace TvHelper.Test
         {
             var controller = new HomeController();
 
-            var result = controller.Video("C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileContainingMovies") as ViewResult;
+            var result = controller.Video() as ViewResult;
             var resultLenght = (List<Video>) result.Model;
 
-            Assert.True(resultLenght.Count == 3);
-        }
-
-        [Test]
-        public void VideoDirectoryShouldNotReturnVideosTest()
-        {
-            var controller = new HomeController();
-
-            var result = controller.Video("C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileNotContainingMovies") as ViewResult;
-            var resultLenght = (List<Video>) result.Model;
-
-            Assert.True(resultLenght.Count == 0);
-        }
-
-        [Test]
-        public void VideoDirectoryInvalidDirReturnVideosTest()
-        {
-            var controller = new HomeController();
-
-            Assert.Throws<DirectoryNotFoundException>(() => controller.Video("asd"));
+            Assert.True(resultLenght.Count == 11);
         }
     }
 }

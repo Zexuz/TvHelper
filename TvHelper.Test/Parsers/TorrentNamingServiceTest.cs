@@ -14,8 +14,8 @@ namespace TvHelper.Test
             var namingService = new StringToTorrentParser();
 
             var torrent = namingService.StringToDownloadedTorrent(name);
-            Assert.AreEqual(torrent.EpisodeNr,"13");
-            Assert.AreEqual(torrent.SeasonNr,"02");
+            Assert.AreEqual(torrent.EpisodeNr,13);
+            Assert.AreEqual(torrent.SeasonNr,2);
             Assert.AreEqual(torrent.Title,"test name of series");
         }
     }

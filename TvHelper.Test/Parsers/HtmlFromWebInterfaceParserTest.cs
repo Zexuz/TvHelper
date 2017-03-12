@@ -47,8 +47,8 @@ namespace TvHelper.Test
             Assert.AreEqual(22,activeVideo.Duration.Seconds);
             Assert.AreEqual(12,activeVideo.CurrentPosition.Minutes);
             Assert.AreEqual(10,activeVideo.CurrentPosition.Seconds);
-            Assert.AreEqual("16",activeVideo.EpisodeNr);
-            Assert.AreEqual("08",activeVideo.SeasonNr);
+            Assert.AreEqual(16,activeVideo.EpisodeNr);
+            Assert.AreEqual(08,activeVideo.SeasonNr);
             Assert.AreEqual("Test Series",activeVideo.Title);
         }
 

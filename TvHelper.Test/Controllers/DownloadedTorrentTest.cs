@@ -12,8 +12,8 @@ namespace TvHelper.Test
         {
             var torrent = new Video
             {
-                EpisodeNr = "01",
-                SeasonNr = "01",
+                EpisodeNr = 1,
+                SeasonNr = 1,
                 Title = "Test series"
             };
 
@@ -36,20 +36,20 @@ namespace TvHelper.Test
         {
             var torrent = new Video
             {
-                SeasonNr= "01"
+                SeasonNr= 1
             };
 
-            Assert.AreEqual("01",torrent.SeasonNr);
+            Assert.AreEqual(1,torrent.SeasonNr);
         }
         [Test]
         public void EpisodeTest()
         {
             var torrent = new Video
             {
-                EpisodeNr= "05"
+                EpisodeNr= 1
             };
 
-            Assert.AreEqual("05",torrent.EpisodeNr);
+            Assert.AreEqual(1,torrent.EpisodeNr);
         }
     }
 }

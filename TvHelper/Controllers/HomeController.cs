@@ -25,7 +25,7 @@ namespace TvHelper.Controllers
             return View();
         }
 
-        public ActionResult Video(string dir)
+        public ActionResult Video()
         {
 //            // Creates a model and passes it on to the view.
 //            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
