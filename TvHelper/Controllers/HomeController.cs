@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using TvHelper.Servicies;
 
@@ -6,7 +7,6 @@ namespace TvHelper.Controllers
 {
     public class HomeController : Controller
     {
-
         private readonly FileReaderService _fileReaderService;
 
         public HomeController()
@@ -22,13 +22,15 @@ namespace TvHelper.Controllers
             return View();
         }
 
-        public ActionResult Video()
+        public ActionResult Video(string dir)
         {
             // Creates a model and passes it on to the view.
-            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath("D:\\Downloads\\TorrentDay");
+            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
+            var torrentNamingService = new TorrentNamingService();
 
-            return View(files);
+            var downloadedTorrents = files.Select(torrentNamingService.ConvertStringToDownloadedTorrent).ToList();
+
+            return View(downloadedTorrents);
         }
-
     }
 }

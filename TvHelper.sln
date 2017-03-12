@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvHelper", "TvHelper\TvHelper.csproj", "{B95C9519-7744-4884-BC42-9390EB6C72EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvHelper.Test", "TvHelper.Test\TvHelper.Test.csproj", "{310959B8-9B43-4B8A-913A-275DC887CA57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B95C9519-7744-4884-BC42-9390EB6C72EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B95C9519-7744-4884-BC42-9390EB6C72EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B95C9519-7744-4884-BC42-9390EB6C72EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{310959B8-9B43-4B8A-913A-275DC887CA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310959B8-9B43-4B8A-913A-275DC887CA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310959B8-9B43-4B8A-913A-275DC887CA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{310959B8-9B43-4B8A-913A-275DC887CA57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

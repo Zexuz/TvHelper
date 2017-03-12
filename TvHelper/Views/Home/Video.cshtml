@@ -1,4 +1,4 @@
-﻿@model string[]
+﻿@model List<TvHelper.Models.DownloadedTorrent>
 @{
     ViewData["Title"] = "Video Page";
     ViewData["Description"] = "The Video page of my website";
@@ -9,10 +9,10 @@
 <h2>Videos</h2>
 
 <ul>
-    @foreach (var fileP in Model)
+    @foreach (var torrent in Model)
     {
 
-        <li><a href="@Url.Action("Open","Video",new {filePath = fileP})" target="_blank">@fileP</a></li>
+        <li><a href="@Url.Action("Open","Video",new {filePath = torrent.Path})" target="_blank">@torrent</a></li>
     }
 </ul>
 

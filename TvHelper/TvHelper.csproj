@@ -85,8 +85,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs" />
+    <Compile Include="Models\DownloadedTorrent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicies\FileReaderService.cs" />
+    <Compile Include="Servicies\TorrentNamingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -125,7 +127,6 @@
   <ItemGroup>
     <Folder Include="Content" />
     <Folder Include="Interfaces" />
-    <Folder Include="Models" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

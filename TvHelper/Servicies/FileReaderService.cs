@@ -11,7 +11,14 @@ namespace TvHelper.Servicies
         public string[]GetAllFilesAndDirectoriesInPath(string path)
         {
             var filesAndDirs = Directory.GetFiles(path, "*", SearchOption.AllDirectories);
-            return filesAndDirs;
+            var moviesOnly = GetOnlyVideoFiles(filesAndDirs);
+            return moviesOnly;
+        }
+
+        private string[] GetOnlyVideoFiles(IEnumerable<string> allFiles)
+        {
+            var extensions = new List<string>{".mkv",".mp4"};
+            return allFiles.Where(file => extensions.Contains(Path.GetExtension(file))).ToArray();
         }
 
 
