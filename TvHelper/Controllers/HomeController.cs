@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using TvHelper.Parsers;
+using TvHelper.Repositories;
 using TvHelper.Servicies;
 
 namespace TvHelper.Controllers
@@ -25,16 +27,19 @@ namespace TvHelper.Controllers
 
         public ActionResult Video(string dir)
         {
-            // Creates a model and passes it on to the view.
-            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
-            var stringToTorrentParses = new StringToTorrentParser();
+//            // Creates a model and passes it on to the view.
+//            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
+//            var stringToTorrentParses = new StringToTorrentParser();
+//
+//            var videos = files.Select(stringToTorrentParses.StringToDownloadedTorrent).ToList();
 
-            var videos = files.Select(stringToTorrentParses.StringToDownloadedTorrent).ToList();
-           //todo check if mpc-hc prosess is running
+            //todo check if mpc-hc prosess is running
             //if it is, we are watching a video. Then get the current video from the webinterface.
             //save that info in the db?c
+            var videoRepository = new VideoRepository();
 
-            return View(videos);
+            var allVideosFromDb = videoRepository.GetAllVideo();
+            return View(allVideosFromDb);
         }
     }
 }

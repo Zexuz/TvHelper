@@ -18,8 +18,8 @@ namespace TvHelper.Parsers
             var torrent = new Video
             {
                 Title = match.Groups[1].ToString().Replace('.', ' ').Trim(),
-                SeasonNr =  match.Groups[2].Value,
-                EpisodeNr = match.Groups[3].Value,
+                SeasonNr =  int.Parse(match.Groups[2].Value),
+                EpisodeNr = int.Parse(match.Groups[3].Value),
                 Path = fileName
 
             };
