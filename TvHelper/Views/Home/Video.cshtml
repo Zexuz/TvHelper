@@ -1,0 +1,21 @@
+﻿@model string[]
+@{
+    ViewData["Title"] = "Video Page";
+    ViewData["Description"] = "The Video page of my website";
+}
+
+<p>This is the video.cshtml</p>
+
+<h2>Videos</h2>
+
+<ul>
+    @foreach (var fileP in Model)
+    {
+
+        <li><a href="@Url.Action("Open","Video",new {filePath = fileP})" target="_blank">@fileP</a></li>
+    }
+</ul>
+
+@section Scripts {
+    @*Insert any script tags for this page here*@
+}
