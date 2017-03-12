@@ -17,7 +17,7 @@ namespace TvHelper.Servicies
 
             var torrent = new DownloadedTorrent
             {
-                Title = match.Groups[1].ToString().Replace('.', ' '),
+                Title = match.Groups[1].ToString().Replace('.', ' ').Trim(),
                 SeasonNr =  match.Groups[2].Value,
                 EpisodeNr = match.Groups[3].Value,
                 Path = fileName
