@@ -47,9 +47,10 @@
   <ItemGroup>
     <Compile Include="Controllers\DownloadedTorrentTest.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="Parsers\TorrentNamingServiceTest.cs" />
+    <Compile Include="Parsers\HtmlFromWebInterfaceParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicies\FileReaderServiceTest.cs" />
-    <Compile Include="Servicies\TorrentNamingServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TvHelper\TvHelper.csproj">

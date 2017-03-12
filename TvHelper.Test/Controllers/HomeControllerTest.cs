@@ -17,7 +17,7 @@ namespace TvHelper.Test
             var controller = new HomeController();
 
             var result = controller.Video("C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileContainingMovies") as ViewResult;
-            var resultLenght = (List<DownloadedTorrent>) result.Model;
+            var resultLenght = (List<Video>) result.Model;
 
             Assert.True(resultLenght.Count == 3);
         }
@@ -28,7 +28,7 @@ namespace TvHelper.Test
             var controller = new HomeController();
 
             var result = controller.Video("C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileNotContainingMovies") as ViewResult;
-            var resultLenght = (List<DownloadedTorrent>) result.Model;
+            var resultLenght = (List<Video>) result.Model;
 
             Assert.True(resultLenght.Count == 0);
         }

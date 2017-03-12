@@ -26,9 +26,9 @@ namespace TvHelper.Controllers
         {
             // Creates a model and passes it on to the view.
             var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
-            var torrentNamingService = new TorrentNamingService();
+            var torrentNamingService = new StringToTorrentParser();
 
-            var downloadedTorrents = files.Select(torrentNamingService.ConvertStringToDownloadedTorrent).ToList();
+            var downloadedTorrents = files.Select(torrentNamingService.StringToDownloadedTorrent).ToList();
 
             return View(downloadedTorrents);
         }

@@ -1,6 +1,6 @@
 ﻿namespace TvHelper.Models
 {
-    public class DownloadedTorrent
+    public class Video
     {
         public string Title { get; set; }
         public string SeasonNr { get; set; }

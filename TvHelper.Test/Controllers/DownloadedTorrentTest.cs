@@ -10,7 +10,7 @@ namespace TvHelper.Test
         [Test]
         public void ToStringTest()
         {
-            var torrent = new DownloadedTorrent
+            var torrent = new Video
             {
                 EpisodeNr = "01",
                 SeasonNr = "01",
@@ -23,7 +23,7 @@ namespace TvHelper.Test
         [Test]
         public void TitleTest()
         {
-            var torrent = new DownloadedTorrent
+            var torrent = new Video
             {
                 Title = "Test series"
             };
@@ -34,7 +34,7 @@ namespace TvHelper.Test
         [Test]
         public void SeasonTest()
         {
-            var torrent = new DownloadedTorrent
+            var torrent = new Video
             {
                 SeasonNr= "01"
             };
@@ -44,7 +44,7 @@ namespace TvHelper.Test
         [Test]
         public void EpisodeTest()
         {
-            var torrent = new DownloadedTorrent
+            var torrent = new Video
             {
                 EpisodeNr= "05"
             };
