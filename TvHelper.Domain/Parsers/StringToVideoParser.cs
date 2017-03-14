@@ -3,11 +3,11 @@ using TvHelper.Domain.Models;
 
 namespace TvHelper.Domain.Parsers
 {
-    public class StringToVideoParser
+    public static class StringToVideoParser
     {
-        public Video StringToDownloadedVideo(string fileName)
+        public static Video StringToVideo(string fileName)
         {
-            const string pattern = @"(.+)S(\d{2})E(\d{2}).+";
+            const string pattern = @"(.+)[S|s](\d{2})[E|e](\d{2}).+";
             var lastSubFolder = fileName.Substring(fileName.LastIndexOf('\\') + 1);
 
             var regEx = new Regex(pattern);

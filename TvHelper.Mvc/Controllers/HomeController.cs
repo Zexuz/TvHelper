@@ -30,14 +30,14 @@ namespace TvHelper.Controllers
 //            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
 //            var stringToTorrentParses = new StringToVideoParser();
 //
-//            var videos = files.Select(stringToTorrentParses.StringToDownloadedVideo).ToList();
+//            var videos = files.Select(stringToTorrentParses.StringToVideo).ToList();
 
             //todo check if mpc-hc prosess is running
             //if it is, we are watching a video. Then get the current video from the webinterface.
             //save that info in the db?c
             var videoRepository = new VideoRepository();
 
-            var allVideosFromDb = videoRepository.GetAllVideo();
+            var allVideosFromDb = videoRepository.GetAllVideosFromDatabase();
             return View(allVideosFromDb);
         }
     }

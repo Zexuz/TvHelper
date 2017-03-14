@@ -8,18 +8,29 @@ namespace TvHelper.Test.Servicies
     public class FileReaderServiceTest
     {
         [Test]
-        public void VideoDirectoryShouldReturnVideosTest()
+        public void VideoDirectoryShouldReturnAllFilesTest()
         {
             var service = new FileReaderService();
 
             var result = service.GetAllFilesAndDirectoriesInPath(
                 "C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileContainingMovies");
 
+            Assert.True(result.Count == 18);
+        }
+
+        [Test]
+        public void VideoDirectoryShouldReturnOnlyMovies()
+        {
+            var service = new FileReaderService();
+
+            var result = service.GetOnlyVideosInPath(
+                "C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileContainingMovies");
+
             Assert.True(result.Count == 3);
         }
 
         [Test]
-        public void VideoDirectoryShouldNotReturnVideosTest()
+        public void VideoDirectoryShouldReturnNothingTest()
         {
             var service = new FileReaderService();
 

@@ -35,7 +35,7 @@ namespace TvHelper.Domain.Parsers
         public Video GetVideo()
         {
             var innerText = _doc.GetElementbyId("file").InnerText;
-            var fileName = new StringToVideoParser().StringToDownloadedVideo(innerText);
+            var fileName = StringToVideoParser.StringToVideo(innerText);
             return fileName;
         }
 

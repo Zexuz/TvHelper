@@ -4,10 +4,10 @@ using TvHelper.Domain.Models;
 
 namespace TvHelper.Domain.Servicies
 {
-    public class VideoToStringParser
+    public static class VideoToStringParser
     {
 
-        public string ToSortString(Video video)
+        public static string ToSortString(Video video)
         {
 
             var epsideoString = video.EpisodeNr.ToString();

@@ -48,6 +48,7 @@
     <Compile Include="Extensions\SQLRederExtension.cs" />
     <Compile Include="Interfaces\IFileReaderService.cs" />
     <Compile Include="Interfaces\IPreProcessorService.cs" />
+    <Compile Include="Interfaces\IVideoRepository.cs" />
     <Compile Include="Models\ActiveVideo.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Parsers\HtmlFromWebInterfaceParser.cs" />
