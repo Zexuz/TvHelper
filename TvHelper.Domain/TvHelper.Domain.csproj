@@ -44,7 +44,7 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Exceptions\InvalidVideoException.cs" />
     <Compile Include="Extensions\SQLRederExtension.cs" />
     <Compile Include="Models\ActiveVideo.cs" />
     <Compile Include="Models\Video.cs" />
@@ -54,6 +54,7 @@
     <Compile Include="Repositories\VideoRepository.cs" />
     <Compile Include="Servicies\ChromeService.cs" />
     <Compile Include="Servicies\FileReaderService.cs" />
+    <Compile Include="Servicies\VideoToStringService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces" />
