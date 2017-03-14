@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TvHelper.Domain.Parsers;
 
 namespace TvHelper.Test.Parsers
@@ -28,7 +27,7 @@ namespace TvHelper.Test.Parsers
             var torrent = StringToVideoParser.StringToVideo(name);
             Assert.AreEqual(11,torrent.EpisodeNr);
             Assert.AreEqual(3,torrent.SeasonNr);
-            Assert.AreEqual("The Last Man On Earth",torrent.Title);
+            Assert.AreEqual("sample-the last man on earth",torrent.Title);
         }
     }
 }

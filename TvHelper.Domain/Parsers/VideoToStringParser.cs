@@ -1,5 +1,4 @@
-﻿using System;
-using TvHelper.Domain.Exceptions;
+﻿using TvHelper.Domain.Exceptions;
 using TvHelper.Domain.Models;
 
 namespace TvHelper.Domain.Servicies
