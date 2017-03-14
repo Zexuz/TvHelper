@@ -1,18 +1,14 @@
 ﻿using NUnit.Framework;
-using TvHelper.Parsers;
-using TvHelper.Servicies;
+using TvHelper.Domain.Parsers;
 
-namespace TvHelper.Test
+namespace TvHelper.Test.Parsers
 {
     [TestFixture]
     public class HtmlFromWebInterfaceParserTest
     {
-
-
         [Test]
         public void ParseHtmlToActiveVideo()
         {
-
             #region HtmlResponse
 
             var htmlRes = "<body class=\"page-variables\">" +
@@ -37,23 +33,20 @@ namespace TvHelper.Test
                           "<p id=\"size\">623 MB</p>" +
                           "<p id=\"reloadtime\">0</p>" +
                           "<p id=\"version\">1.7.11.0</p>";
+
             #endregion
 
             var videoPlayerWebInterfaceServiceTest = new HtmlFromWebInterfaceParser(htmlRes);
             var activeVideo = videoPlayerWebInterfaceServiceTest.GetActiveVideo();
 
-            Assert.AreEqual(true,activeVideo.IsPlaying);
-            Assert.AreEqual(21,activeVideo.Duration.Minutes);
-            Assert.AreEqual(22,activeVideo.Duration.Seconds);
-            Assert.AreEqual(12,activeVideo.CurrentPosition.Minutes);
-            Assert.AreEqual(10,activeVideo.CurrentPosition.Seconds);
-            Assert.AreEqual(16,activeVideo.EpisodeNr);
-            Assert.AreEqual(08,activeVideo.SeasonNr);
-            Assert.AreEqual("Test Series",activeVideo.Title);
+            Assert.AreEqual(true, activeVideo.IsPlaying);
+            Assert.AreEqual(21, activeVideo.Duration.Minutes);
+            Assert.AreEqual(22, activeVideo.Duration.Seconds);
+            Assert.AreEqual(12, activeVideo.CurrentPosition.Minutes);
+            Assert.AreEqual(10, activeVideo.CurrentPosition.Seconds);
+            Assert.AreEqual(16, activeVideo.EpisodeNr);
+            Assert.AreEqual(08, activeVideo.SeasonNr);
+            Assert.AreEqual("Test Series", activeVideo.Title);
         }
-
-
-
-
     }
 }

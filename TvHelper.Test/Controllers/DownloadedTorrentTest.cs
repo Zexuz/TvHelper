@@ -1,8 +1,7 @@
-﻿using System;
-using NUnit.Framework;
-using TvHelper.Models;
+﻿using NUnit.Framework;
+using TvHelper.Domain.Models;
 
-namespace TvHelper.Test
+namespace TvHelper.Test.Controllers
 {
     [TestFixture]
     public class DownloadedTorrentTest
@@ -17,7 +16,7 @@ namespace TvHelper.Test
                 Title = "Test series"
             };
 
-            Assert.AreEqual("Test series S01E01",torrent.ToString());
+            Assert.AreEqual("Test series S01E01", torrent.ToString());
         }
 
         [Test]
@@ -28,7 +27,7 @@ namespace TvHelper.Test
                 Title = "Test series"
             };
 
-            Assert.AreEqual("Test series",torrent.Title);
+            Assert.AreEqual("Test series", torrent.Title);
         }
 
         [Test]
@@ -36,20 +35,21 @@ namespace TvHelper.Test
         {
             var torrent = new Video
             {
-                SeasonNr= 1
+                SeasonNr = 1
             };
 
-            Assert.AreEqual(1,torrent.SeasonNr);
+            Assert.AreEqual(1, torrent.SeasonNr);
         }
+
         [Test]
         public void EpisodeTest()
         {
             var torrent = new Video
             {
-                EpisodeNr= 1
+                EpisodeNr = 1
             };
 
-            Assert.AreEqual(1,torrent.EpisodeNr);
+            Assert.AreEqual(1, torrent.EpisodeNr);
         }
     }
 }

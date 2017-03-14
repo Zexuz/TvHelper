@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Automation;
 
-namespace TvHelper.Servicies
+namespace TvHelper.Domain.Servicies
 {
     public class ChromeService
     {
@@ -66,10 +64,11 @@ namespace TvHelper.Servicies
                     TreeWalker treewalker = TreeWalker.ControlViewWalker;
                     AutomationElement elmTabStrip = treewalker.GetParent(elmNewTab);
                     // loop through all the tabs and get the names which is the page title
-                    Condition condTabItem = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.TabItem);
+                    Condition condTabItem =
+                        new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.TabItem);
                     foreach (AutomationElement tabitem in elmTabStrip.FindAll(TreeScope.Children, condTabItem))
                     {
-                       chromeTabs.Add(tabitem.Current.Name);
+                        chromeTabs.Add(tabitem.Current.Name);
                     }
                 }
             }

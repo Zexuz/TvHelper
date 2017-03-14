@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TvHelper.Models
+namespace TvHelper.Domain.Models
 {
     public class Video
     {

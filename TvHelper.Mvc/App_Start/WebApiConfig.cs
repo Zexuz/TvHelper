@@ -20,7 +20,9 @@ namespace TvHelper
             );
 
 
-            var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            var appXmlType =
+                config.Formatters.XmlFormatter.SupportedMediaTypes
+                    .FirstOrDefault(t => t.MediaType == "application/xml");
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
         }
     }

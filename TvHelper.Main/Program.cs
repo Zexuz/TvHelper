@@ -1,5 +1,4 @@
-﻿
-namespace TvHelper.Main
+﻿namespace TvHelper.Main
 {
     internal class Program
     {

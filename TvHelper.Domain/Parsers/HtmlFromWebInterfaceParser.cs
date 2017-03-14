@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using HtmlAgilityPack;
-using TvHelper.Models;
-using TvHelper.Servicies;
+using TvHelper.Domain.Models;
 
-namespace TvHelper.Parsers
+namespace TvHelper.Domain.Parsers
 {
     public class HtmlFromWebInterfaceParser
     {
@@ -52,7 +51,7 @@ namespace TvHelper.Parsers
         private TimeSpan GetDuration()
         {
             var innerText = _doc.GetElementbyId("duration").InnerText;
-            var durationInSec = int.Parse(innerText)/1000;
+            var durationInSec = int.Parse(innerText) / 1000;
 
             return new TimeSpan(0, 0, durationInSec);
         }
@@ -66,7 +65,7 @@ namespace TvHelper.Parsers
             var min = int.Parse(match.Groups[2].Value);
             var sec = int.Parse(match.Groups[3].Value);
 
-            return new TimeSpan(hour,min,sec);
+            return new TimeSpan(hour, min, sec);
         }
     }
 }

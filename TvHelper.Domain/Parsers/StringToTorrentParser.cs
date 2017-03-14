@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
-using TvHelper.Models;
+using TvHelper.Domain.Models;
 
-namespace TvHelper.Parsers
+namespace TvHelper.Domain.Parsers
 {
     public class StringToTorrentParser
     {
@@ -18,10 +18,9 @@ namespace TvHelper.Parsers
             var torrent = new Video
             {
                 Title = match.Groups[1].ToString().Replace('.', ' ').Trim(),
-                SeasonNr =  int.Parse(match.Groups[2].Value),
+                SeasonNr = int.Parse(match.Groups[2].Value),
                 EpisodeNr = int.Parse(match.Groups[3].Value),
                 Path = fileName
-
             };
 
             return torrent;

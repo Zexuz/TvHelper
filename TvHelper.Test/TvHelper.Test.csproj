@@ -53,13 +53,17 @@
     <Compile Include="Servicies\FileReaderServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TvHelper.Domain\TvHelper.Domain.csproj">
+      <Project>{8FBFD957-E5AB-424C-8857-F19CF2CD47FA}</Project>
+      <Name>TvHelper.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TvHelper.Main\TvHelper.Main.csproj">
       <Project>{7B8E6808-6743-4B3E-A32D-5A8FAEAD086C}</Project>
       <Name>TvHelper.Main</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TvHelper\TvHelper.csproj">
+    <ProjectReference Include="..\TvHelper.Mvc\TvHelper.Mvc.csproj">
       <Project>{B95C9519-7744-4884-BC42-9390EB6C72EC}</Project>
-      <Name>TvHelper</Name>
+      <Name>TvHelper.Mvc</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

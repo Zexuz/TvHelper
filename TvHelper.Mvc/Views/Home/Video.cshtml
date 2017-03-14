@@ -1,4 +1,4 @@
-﻿@model List<TvHelper.Models.Video>
+﻿@model List<TvHelper.Domain.Models.Video>
 @{
     ViewData["Title"] = "Video Page";
     ViewData["Description"] = "The Video page of my website";
@@ -11,11 +11,10 @@
 <ul>
     @foreach (var torrent in Model)
     {
-
         <li>
-            <a href="@Url.Action("Open", "Video", new {filePath = torrent.Path})" target="_blank">@torrent</a> <p class="@(torrent.StartTime == DateTime.MinValue ? "new right" : "old")">new</p>
+            <a href="@Url.Action("Open", "Video", new {filePath = torrent.Path})" target="_blank">@torrent</a>
+            <p class="@(torrent.StartTime == DateTime.MinValue ? "new right" : "old")">new</p>
         </li>
-
     }
 </ul>
 

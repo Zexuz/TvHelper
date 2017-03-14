@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using NUnit.Framework;
 using TvHelper.Controllers;
-using TvHelper.Models;
+using TvHelper.Domain.Models;
 
-namespace TvHelper.Test
+namespace TvHelper.Test.Controllers
 {
     [TestFixture]
     public class HomeControllerTest

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace TvHelper.Models
+namespace TvHelper.Domain.Models
 {
-    public class ActiveVideo:Video
+    public class ActiveVideo : Video
     {
         public bool IsPlaying { get; set; }
         public TimeSpan Duration { get; set; }

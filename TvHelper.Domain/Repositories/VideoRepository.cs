@@ -1,28 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using TvHelper.Extensions;
-using TvHelper.Models;
+using TvHelper.Domain.Extensions;
+using TvHelper.Domain.Models;
 
-namespace TvHelper.Repositories
+namespace TvHelper.Domain.Repositories
 {
     public class VideoRepository
     {
-
-
         public List<Video> GetAllVideo()
         {
             var connectionString = "Data Source=DESKTOP-4LSH009\\SQLEXPRESS02;" +
-                "Initial Catalog=tvhelper;" +
-                "User id=sa;" +
-                "Password=test;";
+                                   "Initial Catalog=tvhelper;" +
+                                   "User id=sa;" +
+                                   "Password=test;";
             var conn = new SqlConnection(connectionString);
 
             conn.Open();
 
-            var command = new SqlCommand("SELECT * FROM WatchedVideos",conn);
+            var command = new SqlCommand("SELECT * FROM WatchedVideos", conn);
 
             var list = new List<Video>();
-            using(var reader = command.ExecuteReader())
+            using (var reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
@@ -42,6 +40,5 @@ namespace TvHelper.Repositories
 
             return list;
         }
-
     }
 }
