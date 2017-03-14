@@ -13,7 +13,11 @@
     {
         <li>
             <a href="@Url.Action("Open", "Video", new {filePath = torrent.Path})" target="_blank">@torrent</a>
-            <p class="@(torrent.StartTime == DateTime.MinValue ? "new right" : "old")">new</p>
+            @if (torrent.StartTime == DateTime.MinValue)
+            {
+                <p class="new right">new</p>
+            }
+
         </li>
     }
 </ul>
