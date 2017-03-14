@@ -65,5 +65,23 @@ namespace TvHelper.Domain.Repositories
             var command = new SqlCommand(queryString, conn);
             command.ExecuteReader();
         }
+
+        public void UpdateVideoToActiveVideo(Video video)
+        {
+            var connectionString = "Data Source=DESKTOP-4LSH009\\SQLEXPRESS02;" +
+                                   "Initial Catalog=tvhelper;" +
+                                   "User id=sa;" +
+                                   "Password=test;";
+            var conn = new SqlConnection(connectionString);
+
+            conn.Open();
+
+            var queryString =
+                $"UPDATE tvhelper.dbo.WatchedVideos SET Title = '{video.Title}', Season = {video.SeasonNr}, [StartTime ] = '{video.StartTime}', WatchedTime = {video.WatchedTime.TotalSeconds}, Episode = {video.EpisodeNr}, FilePath = '{video.Path}', DurationInSec ={video.Duration.TotalSeconds}" +
+                $" WHERE Title = '{video.Title}' AND Season = {video.SeasonNr} AND Episode = {video.EpisodeNr};";
+
+            var command = new SqlCommand(queryString, conn);
+            command.ExecuteReader();
+        }
     }
 }

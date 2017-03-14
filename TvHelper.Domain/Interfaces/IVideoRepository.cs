@@ -7,5 +7,6 @@ namespace TvHelper.Domain.Interfaces
     {
         List<Video> GetAllVideosFromDatabase();
         void InsertVideos(List<Video> newVideos);
+        void UpdateVideoToActiveVideo(Video video);
     }
 }

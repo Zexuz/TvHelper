@@ -12,6 +12,8 @@ namespace TvHelper
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            UnityConfig.RegisterComponents();
         }
     }
 }

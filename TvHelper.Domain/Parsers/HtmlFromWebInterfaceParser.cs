@@ -15,21 +15,14 @@ namespace TvHelper.Domain.Parsers
             _doc.LoadHtml(html);
         }
 
-        public ActiveVideo GetActiveVideo()
+        public Video GetActiveVideo()
         {
             var video = GetVideo();
-            var activeVideo = new ActiveVideo
-            {
-                CurrentPosition = GetCurrentPosition(),
-                Duration = GetDuration(),
-                IsPlaying = IsPlaying(),
-                EpisodeNr = video.EpisodeNr,
-                SeasonNr = video.SeasonNr,
-                Title = video.Title,
-                Path = video.Path
-            };
 
-            return activeVideo;
+            video.Duration = GetDuration();
+            video.WatchedTime = GetCurrentPosition();
+
+            return video;
         }
 
         public Video GetVideo()
