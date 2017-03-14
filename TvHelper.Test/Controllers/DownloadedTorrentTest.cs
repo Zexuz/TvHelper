@@ -17,7 +17,7 @@ namespace TvHelper.Test.Controllers
                 Title = "Test series"
             };
 
-            var videoToStringService = new VideoToStringService();
+            var videoToStringService = new VideoToStringParser();
             var videoString = videoToStringService.ToSortString(vidoe);
 
             Assert.AreEqual("Test series S01E01", videoString);
@@ -33,7 +33,7 @@ namespace TvHelper.Test.Controllers
                 Title = "Test series"
             };
 
-            var videoToStringService = new VideoToStringService();
+            var videoToStringService = new VideoToStringParser();
             var videoString = videoToStringService.ToSortString(vidoe);
 
             Assert.AreEqual("Test series S01E10", videoString);
@@ -49,7 +49,7 @@ namespace TvHelper.Test.Controllers
                 Title = "Test series"
             };
 
-            var videoToStringService = new VideoToStringService();
+            var videoToStringService = new VideoToStringParser();
             var videoString = videoToStringService.ToSortString(vidoe);
 
             Assert.AreEqual("Test series S10E10", videoString);
@@ -66,7 +66,7 @@ namespace TvHelper.Test.Controllers
                 Title = "Test series"
             };
 
-            var videoToStringService = new VideoToStringService();
+            var videoToStringService = new VideoToStringParser();
             var videoString = videoToStringService.ToSortString(vidoe);
 
             Assert.AreEqual("Test series S10E01", videoString);

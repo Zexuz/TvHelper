@@ -3,9 +3,9 @@ using TvHelper.Domain.Models;
 
 namespace TvHelper.Domain.Parsers
 {
-    public class StringToTorrentParser
+    public class StringToVideoParser
     {
-        public Video StringToDownloadedTorrent(string fileName)
+        public Video StringToDownloadedVideo(string fileName)
         {
             const string pattern = @"(.+)S(\d{2})E(\d{2}).+";
             var lastSubFolder = fileName.Substring(fileName.LastIndexOf('\\') + 1);

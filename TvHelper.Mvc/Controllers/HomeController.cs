@@ -28,9 +28,9 @@ namespace TvHelper.Controllers
         {
 //            // Creates a model and passes it on to the view.
 //            var files = _fileReaderService.GetAllFilesAndDirectoriesInPath(dir);
-//            var stringToTorrentParses = new StringToTorrentParser();
+//            var stringToTorrentParses = new StringToVideoParser();
 //
-//            var videos = files.Select(stringToTorrentParses.StringToDownloadedTorrent).ToList();
+//            var videos = files.Select(stringToTorrentParses.StringToDownloadedVideo).ToList();
 
             //todo check if mpc-hc prosess is running
             //if it is, we are watching a video. Then get the current video from the webinterface.

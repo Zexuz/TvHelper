@@ -15,7 +15,7 @@ namespace TvHelper.Test.Servicies
             var result = service.GetAllFilesAndDirectoriesInPath(
                 "C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileContainingMovies");
 
-            Assert.True(result.Length == 3);
+            Assert.True(result.Count == 3);
         }
 
         [Test]
@@ -26,7 +26,7 @@ namespace TvHelper.Test.Servicies
             var result = service.GetAllFilesAndDirectoriesInPath(
                 "C:\\Users\\dekstop\\RiderProjects\\TvHelper\\TvHelper.Test\\FileNotContainingMovies");
 
-            Assert.True(result.Length == 0);
+            Assert.True(result.Count == 0);
         }
 
         [Test]

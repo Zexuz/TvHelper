@@ -4,7 +4,7 @@ using TvHelper.Domain.Models;
 
 namespace TvHelper.Domain.Servicies
 {
-    public class VideoToStringService
+    public class VideoToStringParser
     {
 
         public string ToSortString(Video video)
