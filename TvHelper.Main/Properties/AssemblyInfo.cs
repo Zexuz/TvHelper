@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("TvHelper")]
+[assembly: AssemblyTitle("TvHelper.Main")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TvHelper")]
+[assembly: AssemblyProduct("TvHelper.Main")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("B95C9519-7744-4884-BC42-9390EB6C72EC")]
+[assembly: Guid("7B8E6808-6743-4B3E-A32D-5A8FAEAD086C")]
 
 // Version information for an assembly consists of the following four values:
 //
