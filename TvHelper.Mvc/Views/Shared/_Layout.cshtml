@@ -5,30 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - WebApplication</title>
     <link rel="stylesheet" href="~/Content/site.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap.css"/>
-    <link rel="stylesheet" href="~/Content/bootstrap-theme.css"/>
-    <link rel="stylesheet" href="~/Content/materialize.css"/>
+    <link rel="stylesheet" href="~/Content/materialize.min.css"/>
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
+<nav>
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @Html.ActionLink("TvHelper", "Index", "Home", null, new {@class = "navbar-brand"})
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Video", "Video", "Home")</li>
+        <div class="nav-wrapper">
+            <ul class="nav-mobile">
+                <li class="right">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="right">@Html.ActionLink("Video", "Video", "Home")</li>
             </ul>
         </div>
     </div>
-</div>
+</nav>
+
 <div class="container body-content">
     @RenderBody()
     <hr/>
@@ -38,9 +28,8 @@
 </div>
 
 <environment names="Development">
-    <script src="~/Scripts/jquery-1.9.1.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
-    <script src="~/Scripts/materialize.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/materialize.min.js"></script>
     <script src="~/Scripts/site.js"></script>
 </environment>
 

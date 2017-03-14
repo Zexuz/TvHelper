@@ -8,19 +8,35 @@
 
 <h2>Videos</h2>
 
-<ul>
+<table class=" highlight">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>New</th>
+    </tr>
+    </thead>
+
+    <tbody>
     @foreach (var torrent in Model)
     {
-        <li>
-            <a href="@Url.Action("Open", "Video", new {filePath = torrent.Path})" target="_blank">@torrent</a>
+        <tr>
+            <td>
+                <a href="@Url.Action("Open", "Video", new {filePath = torrent.Path})" target="_blank">
+                    @torrent.ToString()
+                </a>
+            </td>
+
             @if (torrent.StartTime == DateTime.MinValue)
             {
-                <p class="new right">new</p>
+                <td>
+                    <p class="red">NEW</p>
+                </td>
             }
-
-        </li>
+        </tr>
     }
-</ul>
+    </tbody>
+</table>
+
 
 @section Scripts {
     @*Insert any script tags for this page here*@

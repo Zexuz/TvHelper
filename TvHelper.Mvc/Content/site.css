@@ -1,5 +1,4 @@
 body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
@@ -32,3 +31,13 @@ textarea { max-width: 280px; }
 .container.body-content li:nth-child(odd) { background-color: #808080; }
 
 .container.body-content li:nth-child(even) { background-color: #a9a9a9; }
+
+td {
+    padding: 10px;
+}
+a {
+    cursor:pointer;
+    display:block;
+    padding: 10px;
+    margin: -10px;
+}
