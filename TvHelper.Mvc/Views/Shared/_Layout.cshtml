@@ -11,9 +11,9 @@
 <nav>
     <div class="container">
         <div class="nav-wrapper">
-            <ul class="nav-mobile">
-                <li class="right">@Html.ActionLink("Home", "Index", "Home")</li>
-                <li class="right">@Html.ActionLink("Video", "Video", "Home")</li>
+            <ul id="nav-mobile" class="hide-on-med-and-down">
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new {@class = ""})</li>
+                <li>@Html.ActionLink("Video", "Video", "Home", null, new {@class = ""})</li>
             </ul>
         </div>
     </div>
