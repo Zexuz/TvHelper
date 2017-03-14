@@ -106,15 +106,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="favicon.ico" />
@@ -125,13 +117,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Scripts\materialize.js" />
     <Content Include="Scripts\materialize.min.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Views\Home\Index.cshtml" />
