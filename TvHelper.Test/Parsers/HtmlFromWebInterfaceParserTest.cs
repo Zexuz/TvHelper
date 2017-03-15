@@ -39,11 +39,10 @@ namespace TvHelper.Test.Parsers
             var videoPlayerWebInterfaceServiceTest = new HtmlFromWebInterfaceParser(htmlRes);
             var activeVideo = videoPlayerWebInterfaceServiceTest.GetActiveVideo();
 
-            Assert.AreEqual(true, activeVideo.IsPlaying);
             Assert.AreEqual(21, activeVideo.Duration.Minutes);
             Assert.AreEqual(22, activeVideo.Duration.Seconds);
-            Assert.AreEqual(12, activeVideo.CurrentPosition.Minutes);
-            Assert.AreEqual(10, activeVideo.CurrentPosition.Seconds);
+            Assert.AreEqual(12, activeVideo.WatchedTime.Minutes);
+            Assert.AreEqual(10, activeVideo.WatchedTime.Seconds);
             Assert.AreEqual(16, activeVideo.EpisodeNr);
             Assert.AreEqual(08, activeVideo.SeasonNr);
             Assert.AreEqual("Test Series", activeVideo.Title);

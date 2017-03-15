@@ -45,10 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\InvalidVideoException.cs" />
+    <Compile Include="Extensions\HtmlHasClassExtension.cs" />
     <Compile Include="Extensions\SQLRederExtension.cs" />
     <Compile Include="Interfaces\IFileReaderService.cs" />
     <Compile Include="Interfaces\IPreProcessorService.cs" />
     <Compile Include="Interfaces\IVideoRepository.cs" />
+    <Compile Include="Interfaces\IWebScraper.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Parsers\HtmlFromWebInterfaceParser.cs" />
     <Compile Include="Parsers\StringToVideoParser.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Servicies\ChromeService.cs" />
     <Compile Include="Servicies\FileReaderService.cs" />
     <Compile Include="Servicies\PreProcessorService.cs" />
+    <Compile Include="Servicies\WebScraperTorrentDayService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

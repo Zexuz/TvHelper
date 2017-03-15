@@ -17,19 +17,22 @@ namespace TvHelper.Test.Servicies
                 {
                     Title = "Some Random Video",
                     EpisodeNr = 17,
-                    SeasonNr = 01
+                    SeasonNr = 01,
+                    Path = "D:\\MyPath\\Some.Random.Video.mkv"
                 },
                 new Video
                 {
                     Title = "Another Random Video",
                     EpisodeNr = 15,
-                    SeasonNr = 03
+                    SeasonNr = 03,
+                    Path = "D:\\MyPath\\Another.Random.Video.mkv"
                 },
                 new Video
                 {
                     Title = "Last Random Video",
                     EpisodeNr = 05,
-                    SeasonNr = 01
+                    SeasonNr = 01,
+                    Path = "D:\\MyPath\\last.Random.Video.mkv"
                 }
             };
 
@@ -39,7 +42,9 @@ namespace TvHelper.Test.Servicies
                 {
                     Title = "Last Random Video",
                     EpisodeNr = 05,
-                    SeasonNr = 01
+                    SeasonNr = 01,
+                    Path = "D:\\MyPath\\last.Random.Video.mkv"
+
                 }
             };
 
@@ -47,7 +52,7 @@ namespace TvHelper.Test.Servicies
 
             var newFiles = preProcessorService.GetNewVidosFromAllVideos(allVideos, oldVideo);
 
-            Assert.AreEqual(newFiles.Count, 3);
+            Assert.AreEqual(2, newFiles.Count);
             Assert.AreEqual(newFiles[0],allVideos[0]);
             Assert.AreEqual(newFiles[1],allVideos[1]);
         }

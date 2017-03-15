@@ -8,7 +8,11 @@ namespace TvHelper.Domain.Parsers
         public static Video StringToVideo(string fileName)
         {
             const string pattern = @"(.+)[S|s](\d{2})[E|e](\d{2}).+";
-            var lastSubFolder = fileName.Substring(fileName.LastIndexOf('\\') + 1);
+            string lastSubFolder;
+            if (fileName.Contains("\\"))
+                lastSubFolder = fileName.Substring(fileName.LastIndexOf('\\') + 1);
+            else
+                lastSubFolder = fileName.Substring(fileName.LastIndexOf('/') + 1);
 
             var regEx = new Regex(pattern);
 

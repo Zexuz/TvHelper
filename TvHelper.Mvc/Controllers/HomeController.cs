@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using TvHelper.Domain.Interfaces;
 using TvHelper.Domain.Repositories;
 using TvHelper.Domain.Servicies;
 
@@ -6,10 +7,12 @@ namespace TvHelper.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IVideoRepository _videoRepository;
         private readonly FileReaderService _fileReaderService;
 
-        public HomeController()
+        public HomeController(IVideoRepository videoRepository)
         {
+            _videoRepository = videoRepository;
             _fileReaderService = new FileReaderService();
         }
 
@@ -32,9 +35,8 @@ namespace TvHelper.Controllers
             //todo check if mpc-hc prosess is running
             //if it is, we are watching a video. Then get the current video from the webinterface.
             //save that info in the db?c
-            var videoRepository = new VideoRepository();
 
-            var allVideosFromDb = videoRepository.GetAllVideosFromDatabase();
+            var allVideosFromDb = _videoRepository.GetAllVideosFromDatabase();
             return View(allVideosFromDb);
         }
     }
