@@ -25,6 +25,8 @@ namespace TvHelper.Test.Controllers
             var result = controller.Video() as ViewResult;
             var resultLenght = (List<Video>) result.Model;
 
+            A.CallTo(() => fakeDb.GetAllVideosFromDatabase()).MustHaveHappened(Repeated.Exactly.Once);
+
             Assert.True(resultLenght.Count == 11);
         }
     }
